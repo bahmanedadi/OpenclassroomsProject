@@ -157,8 +157,7 @@ header .logo {
   align-items: center;
   gap: 27px;
 }
-
-li {
+.fonctionnement ul li .fonctionnement li {
   border-radius: 20px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
@@ -174,15 +173,11 @@ li {
   background: var(--Background, #F6F6F6);
   margin-top: 57px;
 }
-
-.restaurants h2 {
+.restaurants .restaurants h2 {
   text-align: start;
   margin-top: 30px;
 }
-
-.restaurants-cards {
-  display: flex;
-  flex-direction: column;
+.restaurants .restaurants-cards {
   gap: 18px;
 }
 
