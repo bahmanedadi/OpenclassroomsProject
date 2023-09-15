@@ -91,7 +91,6 @@ p {
 
 .main-container {
   width: 100%;
-  max-width: 767px;
   padding: 0 50px;
   display: flex;
   flex-direction: column;
@@ -157,7 +156,8 @@ header .logo {
   align-items: center;
   gap: 27px;
 }
-.fonctionnement ul li .fonctionnement li {
+
+.fonctionnement li {
   border-radius: 20px;
   background: var(--Background, #F6F6F6);
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
