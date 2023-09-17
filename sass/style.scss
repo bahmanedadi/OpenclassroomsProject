@@ -1,9 +1,9 @@
-@import './_partials/reset';
-@import './_partials/variables';
-@import './_partials/mixins';
-@import './_partials/body';
-@import './_partials/header';
-@import './_partials/footer';
+@import './reset';
+@import './variables';
+@import './mixins';
+@import './body';
+@import './header';
+@import './footer';
 
 /****** General ***********/
 * {
@@ -41,27 +41,3 @@ h2 {
 
 
 
-@import './_partials/reset';
-@import './_partials/variables';
-@import './_partials/mixins';
-@import './_partials/body';
-@import './_partials/header';
-@import './_partials/footer';
-
-/****** General ***********/
-* {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type: none;
-    color: #000;
-    line-height: normal;
-
-
-}
-
-h1,
-h2 {
-    font-size: 22px;
-    color: #000;
-}
