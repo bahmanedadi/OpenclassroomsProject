@@ -82,6 +82,10 @@ body {
 
 //*section fonctionnement*//
 .fonctionnement {
+    @media(min-width:1025px) {
+        padding: 50px 180px;
+    }
+
 
     h2 {
         font-size: 24px;
@@ -141,9 +145,6 @@ body {
         }
     }
 
-    @media(min-width:1025px) {
-        padding: 50px 180px;
-    }
 
 
 }
@@ -151,11 +152,13 @@ body {
 
 //*section restaurants *//
 .restaurants {
-    @media(min-width: 1025px) {
-        gap: 30px
+    @media(min-width:1025px) {
+        gap: 28px;
+        padding-left: 180px;
+        padding-right: 180px;
+        margin-top: 30px;
+
     }
-
-
 
     display: flex;
     flex-direction: column;
@@ -166,19 +169,26 @@ body {
         padding-left: 20px;
         font-weight: 700;
         margin-top: 54px;
-
     }
 
-
     .restaurants_cards {
-
-
         display: flex;
         flex-direction: column;
+        align-items: start;
         gap: 18px;
         padding-left: 17px;
-        margin-top: 3px;
+        padding-right: 18px;
+        margin-bottom: 66px;
 
+        @media(min-width:1025px) {
+            flex-flow: row wrap;
+            align-items: start;
+            justify-content: space-between;
+            padding: 0;
+            gap: 50px;
+            margin-bottom: 30px;
+
+        }
 
         .card {
             position: relative;
@@ -188,14 +198,18 @@ body {
             width: 100%;
             padding: 17px;
             padding-right: 18px;
-            border-radius: 15px 15px 0px 0px;
+            border-radius: 15px 15px 15px 15px;
+
+            @media(min-width:1025px) {
+                width: 44%;
+                padding: 0;
+            }
 
             &_img {
                 object-fit: cover;
                 height: 231px;
                 width: 100%;
                 border-radius: 15px 15px 0px 0px;
-
             }
 
             &_content {
@@ -211,16 +225,17 @@ body {
                 font-size: 18px;
                 font-weight: 700;
                 padding-left: 13px;
+
             }
 
             &_subtitle {
                 font-size: 17px;
                 font-weight: 300;
                 padding-left: 13px;
+
             }
 
         }
-
 
     }
 
