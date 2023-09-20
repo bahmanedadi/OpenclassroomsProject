@@ -1,13 +1,28 @@
 .footer {
+    @media(min-width :1025px) {
+       display: flex; 
+       flex-direction: row-reverse;
+       gap: 16px;
+      padding:30px 25px;
+      height: 114px;
+     
+    }
     display: block;
     background: $black;
     padding: 22px 25px;
+    
+        
 
     &_title {
         font-family: Shrikhand, cursive;
         font-weight: 400;
         color: $white;
         margin-bottom: 16px;
+        @media (min-width:1025px) {
+            padding: 30px 25px;
+            
+        }
+       
 
     }
 
@@ -17,6 +32,11 @@
         justify-content: start;
         gap: 7px;
         padding-left: 0;
+        @media(min-width :1025px) {
+            flex-direction:row;
+            gap: 20px;
+            padding: 30px 25px ;
+        }
 
     }
 
@@ -30,11 +50,8 @@
             color: $white;
         }
 
-        p,
-
-        a {
+        p,a {
             color: $white;
-
             font-size: 16px;
             font-weight: 400;
             font-size: 16px;
@@ -43,10 +60,11 @@
             line-height: normal;
 
         }
+    }
 
         address {
             font-style: normal;
         }
     }
 
-}
+    

@@ -82,6 +82,7 @@ body {
 
 //*section fonctionnement*//
 .fonctionnement {
+
     h2 {
         font-size: 24px;
         font-style: normal;
@@ -94,7 +95,13 @@ body {
     ul {
         display: flex;
         flex-direction: column;
-        padding-left: 20px;
+        padding-left: 32px;
+
+        @media(min-width: 1025px) {
+            flex-direction: row;
+            gap: 25px;
+
+        }
     }
 
     .step {
@@ -134,7 +141,9 @@ body {
         }
     }
 
-
+    @media(min-width:1025px) {
+        padding: 50px 180px;
+    }
 
 
 }
@@ -142,6 +151,12 @@ body {
 
 //*section restaurants *//
 .restaurants {
+    @media(min-width: 1025px) {
+        gap: 30px
+    }
+
+
+
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -156,6 +171,8 @@ body {
 
 
     .restaurants_cards {
+
+
         display: flex;
         flex-direction: column;
         gap: 18px;
@@ -171,12 +188,13 @@ body {
             width: 100%;
             padding: 17px;
             padding-right: 18px;
+            border-radius: 15px 15px 0px 0px;
 
             &_img {
                 object-fit: cover;
                 height: 231px;
                 width: 100%;
-                border-radius: 15px;
+                border-radius: 15px 15px 0px 0px;
 
             }
 
@@ -192,12 +210,13 @@ body {
             &_title {
                 font-size: 18px;
                 font-weight: 700;
+                padding-left: 13px;
             }
 
             &_subtitle {
                 font-size: 17px;
                 font-weight: 300;
-
+                padding-left: 13px;
             }
 
         }
@@ -214,8 +233,7 @@ body {
         font-size: 14px;
         font-weight: 500;
         border-radius: 3px;
-        padding: 7px 9px;
-        text-align: center;
+        padding: 5px 10px 7px 9px;
         width: 80px;
         height: 29px;
         background-color: $green;
@@ -226,24 +244,53 @@ body {
 }
 
 
-.like_btn {
+.like_btne {
+    background: transparent;
     position: absolute;
     bottom: 26px;
     right: 26px;
+    display: block;
+    width: 22px;
+    height: 21px;
 
     &:hover {
+        cursor: pointer;
         font-weight: 700;
         background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
         -moz-background-clip: text;
-        animation: full-heart 0.5s ease-in-out forwards;
+        animation: empty-heart 0.5s ease-in-out forwards;
+
+    }
+
+}
+
+.like_btnf {
+    background-image: transparent;
+    opacity: 0;
+    position: absolute;
+    bottom: 26px;
+    right: 26px;
+    width: 22px;
+    height: 21px;
+    font-weight: 700;
+    background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    -moz-background-clip: text;
+    transition: opacity 0.5s ease-in-out;
+
+    &:hover {
+        opacity: 1;
+
     }
 }
 
 .loader {
-    background: white;
+    background: #F6F6F6;
     position: fixed;
     display: flex;
     text-align: center;
@@ -253,19 +300,19 @@ body {
     height: 100%;
     z-index: 2;
     animation: disappear 1.5s 1.5s forwards;
+
     span {
         color: $color-secondaire;
-        font-size: 20px;
+        font-size: 24px;
         letter-spacing: 1px;
         font-family: Shrikhand, cursive;
         line-height: 200px;
-        animation: text 3s ease-in-out infinite;
+        animation: text 5s ease-in-out infinite;
     }
 
 }
 
 .ring {
-
     position: fixed;
     width: 200px;
     height: 200px;
@@ -277,17 +324,17 @@ body {
 @keyframes ring {
     0% {
         transform: rotate(0deg);
-        box-shadow: 1px 5px 2px #ab21ce;
+        box-shadow: 2px 6px 3px #ab21ce;
     }
 
     50% {
         transform: rotate(180deg);
-        box-shadow: 1px 5px 2px #18b201;
+        box-shadow: 2px 6px 3px #18b201;
     }
 
     100% {
         transform: rotate(360deg);
-        box-shadow: 1px 5px 2px #8d077b;
+        box-shadow: 2px 6px 3px #8909a3;
     }
 }
 
@@ -302,8 +349,6 @@ body {
     box-shadow: 0 0 5px rgba(255, 255, 255, .3);
 
 }
-
-
 
 @keyframes text {
     50% {
