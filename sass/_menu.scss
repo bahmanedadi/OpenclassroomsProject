@@ -1,5 +1,199 @@
-.menu{
+.header_menu {
+    @include flex;
+    justify-content: center;
+    padding: 14px 89px 13px 17px;
+    background: $white;
+    gap: 88px;
+
+    .logo_menu {
+        width: 197px;
+        height: 36px;
+        padding: 0px 19px 0px 16px;
+    }
+
+}
+
+.menu {
+
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 40px;
+
+
+
+    &_img {
+        width: 100%;
+        height: 275px;
+        object-fit: cover;
+
+
+    }
+
+
+    &_content {
+        background: $Grey-2;
+        border-radius: 40px 40px 0px 0px;
+        margin-top: -100px;
+
+    }
+
+
+    &_info {
+
+        position: relative;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        padding-left: 17px;
+        padding-right: 17px;
+        padding-top: 31px;
+
+
+
+    }
+
+
+
+    &_title {
+        color: var(--Black, #101010);
+        font-family: Shrikhand;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 400;
+
+    }
+
+    .like_btn {
+        top: 42px;
+    }
+
+    &_plats {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+
+
+    .plat_list {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+
+
+
+        .underline_title {
+
+
+
+
+            text-transform: uppercase;
+
+            margin-bottom: rem(20);
+
+            font-weight: 300;
+
+            font-size: rem(16);
+
+
+
+
+
+
+            &::after {
+
+               
+
+            font-size: rem(16);
+
+                content: " ";
+
+                display: block;
+
+                height:0px;            
+
+                width:40px ;
+
+               margin-top: 6px;
+
+                border-bottom:solid 3px  #99E2D0;;
+
+               
+
+               
+
+            }
+
+
+
+
+
+        }
+
+        li {
+            display: flex;
+            flex-direction: row;
+            align-items: inherit;
+            justify-content: space-between;
+            flex-wrap: nowrap;
+            background: $white;
+            border-radius: 15px 15px;
+            box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
+
+
+
+            .plat_price {
+                align-self: flex-end;
+            }
+
+            .plat_confirmation {
+                background-color: #99E2D0;
+                color: #FFF;
+                font-size: 1.25rem;
+                border-top-right-radius: 1rem;
+                border-bottom-right-radius: 1rem;
+                width: 3.5rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
+           
+        }
+
+    }
+
+
+
+    .plat_title {
+        font-size: 18px;
+        font-weight: 700;
+        padding-left: 13px;
+
+
+
+
+    }
+
+    .plat_subtitle {
+        font-size: 17px;
+        font-weight: 300;
+        padding-left: 13px;
+    }
+
+
+    .commande {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 40px;
+
+    }
+
+
 }
