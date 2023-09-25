@@ -114,8 +114,8 @@ body {
   text-align: center;
 }
 .explorer p {
-  font-weight: 300;
   font-size: 18px;
+  font-weight: 300;
   color: #353535;
   margin-left: 34px;
   margin-right: 26px;
@@ -148,9 +148,7 @@ body {
 }
 .fonctionnement h2 {
   font-size: 24px;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   padding-left: 20px;
   padding-bottom: 26px;
 }
@@ -413,15 +411,6 @@ header .logo {
   background: #353535;
   padding: 22px 25px;
 }
-@media (min-width: 1025px) {
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 16px;
-    padding: 30px 25px;
-    height: 114px;
-  }
-}
 .footer_title {
   font-family: Shrikhand, cursive;
   font-weight: 400;
@@ -435,6 +424,7 @@ header .logo {
 }
 .footer_link {
   display: flex;
+  flex-direction: column;
   justify-content: start;
   gap: 7px;
   padding-left: 0;
@@ -455,17 +445,25 @@ header .logo {
 .footer li i {
   color: #FFF;
 }
-.footer li p, .footer li a {
+.footer li p,
+.footer li a {
   color: #FFF;
   font-size: 16px;
-  font-weight: 400;
-  font-size: 16px;
-  font-style: normal;
   font-weight: 500;
-  line-height: normal;
+  font-size: 16px;
+  font-weight: 400;
 }
 .footer address {
   font-style: normal;
+}
+@media (min-width: 1025px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 16px;
+    padding: 30px 25px;
+    height: 114px;
+  }
 }
 
 .header_menu {
@@ -513,7 +511,6 @@ header .logo {
   color: var(--Black, #101010);
   font-family: Shrikhand;
   font-size: 28px;
-  font-style: normal;
   font-weight: 400;
 }
 .menu .like_btn {
@@ -521,44 +518,29 @@ header .logo {
 }
 .menu_plats {
   display: flex;
-  justify-content: center;
   flex-direction: column;
-  gap: 40px;
+  justify-content: center;
+  gap: 20px;
 }
 .menu .plat_list {
   display: flex;
   flex-direction: column;
   gap: 12px;
 }
-.menu .plat_list .underline_title {
-  text-transform: uppercase;
-  margin-bottom: rem(20);
-  font-weight: 300;
-  font-size: rem(16);
-}
-.menu .plat_list .underline_title::after {
-  font-size: rem(16);
-  content: " ";
-  display: block;
-  height: 0px;
-  width: 40px;
-  margin-top: 6px;
-  border-bottom: solid 3px #99E2D0;
-}
-.menu .plat_list li {
+.menu .plat_list .plat {
   display: flex;
   flex-direction: row;
-  align-items: inherit;
+  height: 72px;
   justify-content: space-between;
-  flex-wrap: nowrap;
   background: #FFF;
   border-radius: 15px 15px;
   box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.1);
+  margin: 10px;
 }
-.menu .plat_list li .plat_price {
+.menu .plat_list .plat .plat_price {
   align-self: flex-end;
 }
-.menu .plat_list li .plat_confirmation {
+.menu .plat_list .plat .plat_confirmation {
   background-color: #99E2D0;
   color: #FFF;
   font-size: 1.25rem;
@@ -569,10 +551,26 @@ header .logo {
   align-items: center;
   justify-content: center;
 }
+.menu .underline_title {
+  text-transform: uppercase;
+  font-size: rem(16);
+  font-weight: 300;
+  margin-left: 13px;
+}
+.menu .underline_title::after {
+  font-size: 256px;
+  content: " ";
+  display: block;
+  height: 0px;
+  width: 40px;
+  margin-top: 6px;
+  border-bottom: solid 3px #99E2D0;
+}
 .menu .plat_title {
   font-size: 18px;
   font-weight: 700;
   padding-left: 13px;
+  margin-top: 13px;
 }
 .menu .plat_subtitle {
   font-size: 17px;
@@ -586,6 +584,70 @@ header .logo {
   margin-top: 40px;
 }
 
+.plat {
+  animation: apparition 1.5s;
+}
+
+.n1 {
+  animation-delay: 0;
+}
+
+.n2 {
+  animation-delay: 0.2s;
+}
+
+.n3 {
+  animation-delay: 0.4s;
+}
+
+.n4 {
+  animation-delay: 0.6s;
+}
+
+.n5 {
+  animation-delay: 0.8s;
+}
+
+.n6 {
+  animation-delay: 1s;
+}
+
+.n7 {
+  animation-delay: 1.2s;
+}
+
+.n8 {
+  animation-delay: 1.4s;
+}
+
+.n9 {
+  animation-delay: 1.6s;
+}
+
+.n_supplementaire {
+  animation-delay: 0.5s;
+}
+
+@-webkit-keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
 /****** General ***********/
 * {
   font-family: "Roboto", sans-serif;

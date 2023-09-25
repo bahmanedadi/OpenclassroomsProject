@@ -1,47 +1,38 @@
 .footer {
-    @media(min-width :1025px) {
-       display: flex; 
-       flex-direction: row-reverse;
-       gap: 16px;
-      padding:30px 25px;
-      height: 114px;
-     
-    }
     display: block;
     background: $black;
     padding: 22px 25px;
-    
-        
+
 
     &_title {
         font-family: Shrikhand, cursive;
         font-weight: 400;
         color: $white;
         margin-bottom: 16px;
+
         @media (min-width:1025px) {
             padding: 23px 25px;
-            
+
         }
-       
 
     }
 
     &_link {
-       display: flex;
+        @include flex_column;
         justify-content: start;
         gap: 7px;
         padding-left: 0;
+
         @media(min-width :1025px) {
-            flex-direction:row;
+            flex-direction: row;
             gap: 12px;
-            padding: 30px 25px ;
+            padding: 30px 25px;
         }
 
     }
 
     li {
-        display: flex;
-        flex-direction: row;
+       @include flex_row;
         justify-content: start;
         gap: 11px;
 
@@ -49,21 +40,26 @@
             color: $white;
         }
 
-        p,a {
+        p,
+        a {
             color: $white;
-            font-size: 16px;
-            font-weight: 400;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: normal;
+            @include font(16px, 500);
+            @include font(16px, 400);
 
         }
     }
 
-        address {
-            font-style: normal;
-        }
+    address {
+        font-style: normal;
     }
 
-    
+    @media(min-width :1025px) {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 16px;
+        padding: 30px 25px;
+        height: 114px;
+
+    }
+
+}

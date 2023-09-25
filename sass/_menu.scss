@@ -16,8 +16,7 @@
 .menu {
 
     position: relative;
-    display: flex;
-    flex-direction: column;
+    @include flex_column;
     gap: 40px;
 
 
@@ -40,7 +39,6 @@
 
 
     &_info {
-
         position: relative;
         display: flex;
         flex-wrap: nowrap;
@@ -50,18 +48,13 @@
         padding-right: 17px;
         padding-top: 31px;
 
-
-
     }
-
-
 
     &_title {
         color: var(--Black, #101010);
         font-family: Shrikhand;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 400;
+        @include font(28px, 400);
+
 
     }
 
@@ -70,81 +63,24 @@
     }
 
     &_plats {
-        display: flex;
+        @include flex_column;
         justify-content: center;
-        flex-direction: column;
-        gap: 40px;
+        gap: 20px;
     }
 
 
-
     .plat_list {
-        display: flex;
-        flex-direction: column;
+        @include flex_column;
         gap: 12px;
 
-
-
-
-        .underline_title {
-
-
-
-
-            text-transform: uppercase;
-
-            margin-bottom: rem(20);
-
-            font-weight: 300;
-
-            font-size: rem(16);
-
-
-
-
-
-
-            &::after {
-
-               
-
-            font-size: rem(16);
-
-                content: " ";
-
-                display: block;
-
-                height:0px;            
-
-                width:40px ;
-
-               margin-top: 6px;
-
-                border-bottom:solid 3px  #99E2D0;;
-
-               
-
-               
-
-            }
-
-
-
-
-
-        }
-
-        li {
-            display: flex;
-            flex-direction: row;
-            align-items: inherit;
+        .plat {
+            @include flex_row;
+            height: 72px;
             justify-content: space-between;
-            flex-wrap: nowrap;
             background: $white;
             border-radius: 15px 15px;
             box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
-
-
+            margin: 10px;
 
             .plat_price {
                 align-self: flex-end;
@@ -162,30 +98,36 @@
                 justify-content: center;
             }
 
-
-           
         }
 
     }
 
+    .underline_title {
+        text-transform: uppercase;
+        @include font(rem(16), 300);
+        margin-left: 13px;
 
+        &::after {
+            font-size: 256px;
+            content: " ";
+            display: block;
+            height: 0px;
+            width: 40px;
+            margin-top: 6px;
+            border-bottom: solid 3px #99E2D0;
+        }
+    }
 
     .plat_title {
-        font-size: 18px;
-        font-weight: 700;
+        @include font(18px, 700);
         padding-left: 13px;
-
-
-
-
+        margin-top: 13px;
     }
 
     .plat_subtitle {
-        font-size: 17px;
-        font-weight: 300;
+        @include font(17px, 300);
         padding-left: 13px;
     }
-
 
     .commande {
         display: flex;
@@ -196,4 +138,73 @@
     }
 
 
+}
+
+.plat {
+    animation: apparition 1.5s;
+}
+
+.n1 {
+    animation-delay: 0;
+}
+
+.n2 {
+    animation-delay: 0.2s;
+}
+
+.n3 {
+    animation-delay: 0.4s;
+}
+
+.n4 {
+    animation-delay: 0.6s;
+}
+
+.n5 {
+    animation-delay: 0.8s;
+}
+
+.n6 {
+    animation-delay: 1s;
+}
+
+.n7 {
+    animation-delay: 1.2s;
+}
+
+.n8 {
+
+    animation-delay: 1.4s;
+}
+
+.n9 {
+    animation-delay: 1.6s;
+}
+
+.n_supplementaire {
+    animation-delay: 0.5s;
+}
+
+@-webkit-keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes apparition {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
 }

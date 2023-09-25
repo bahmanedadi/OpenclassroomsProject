@@ -5,4 +5,22 @@
     justify-content: center;
     align-items: center;
 }
+@mixin font($size,$weight){
+    font-size: $size;
+    font-weight: $weight;
+
+}
    
+@mixin flex_column{
+    display: flex;
+    flex-direction: column; 
+    
+}
+@mixin flex_row{
+    display: flex;
+    flex-direction: row;
+}
+@mixin margin($margin-left,$margin-right){
+    margin-left: $margin-left;
+    margin-right: $margin-right;
+}
