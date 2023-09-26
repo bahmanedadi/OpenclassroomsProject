@@ -49,11 +49,7 @@ body {
         @include font(18px, 300);
         color: $black;
         @include margin(34px, 26px);
-
-
     }
-
-
 }
 
 .btn {
@@ -79,6 +75,8 @@ body {
 
 //*section fonctionnement*//
 .fonctionnement {
+    padding: 20px;
+
     @media(min-width:1025px) {
         padding: 50px 180px;
     }
@@ -86,13 +84,13 @@ body {
 
     h2 {
         @include font(24px, 700);
-        padding-left: 20px;
+
         padding-bottom: 26px;
     }
 
     ul {
         @include flex_column;
-        padding-left: 32px;
+
 
         @media(min-width: 1025px) {
             flex-direction: row;
@@ -152,7 +150,7 @@ body {
 
     }
 
-  @include flex_column;
+    @include flex_column;
     gap: 20px;
     background: $grey-light;
 
@@ -185,9 +183,9 @@ body {
             background: $white;
             @include flex_column;
             width: 100%;
-            padding: 17px;
-            padding-right: 18px;
+            box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
             border-radius: 15px 15px 15px 15px;
+            cursor: pointer;
 
             @media(min-width:1025px) {
                 width: 44%;
@@ -206,7 +204,8 @@ body {
                 flex-wrap: nowrap;
                 justify-content: space-between;
                 align-items: center;
-
+                margin-top: 15px;
+                position: relative;
             }
 
             &_title {
@@ -227,7 +226,7 @@ body {
 
     .new_btn {
         position: absolute;
-        top: 26px;
+        top: -226px;
         right: 26px;
         border: #008766;
         text-align: center;
@@ -250,8 +249,7 @@ body {
     bottom: 26px;
     right: 26px;
     display: block;
-    width: 22px;
-    height: 21px;
+    font-size: 26px;
 
     &:hover {
         cursor: pointer;
@@ -270,14 +268,14 @@ body {
 .like_btnf {
     background-image: transparent;
     opacity: 0;
-    position: absolute;
+     position: absolute;
     bottom: 26px;
     right: 26px;
     width: 22px;
     height: 21px;
     font-weight: 700;
     background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
-    -webkit-background-clip: text;
+   -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -288,7 +286,6 @@ body {
 
     }
 }
-
 .loader {
     background: #F6F6F6;
     position: fixed;
@@ -356,9 +353,13 @@ body {
     }
 }
 
-@keyframes disappear {
-    to {
-        transform: scale(0);
-    }
+
+
+.coeur{
+    position: absolute;
+    width: 22px;
+    height: 21px;
+    right: 0;
+    top:20px;
 
 }
