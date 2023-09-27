@@ -251,31 +251,18 @@ body {
     display: block;
     font-size: 26px;
 
-    &:hover {
-        cursor: pointer;
-        font-weight: 700;
-        background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
-        -moz-background-clip: text;
-        animation: empty-heart 0.5s ease-in-out forwards;
-
-    }
-
 }
 
 .like_btnf {
     background-image: transparent;
     opacity: 0;
-     position: absolute;
+    position: absolute;
     bottom: 26px;
     right: 26px;
-    width: 22px;
-    height: 21px;
+    font-size: 26px;
     font-weight: 700;
     background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
-   -webkit-background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     -moz-background-clip: text;
@@ -283,9 +270,11 @@ body {
 
     &:hover {
         opacity: 1;
+        cursor: pointer;
 
     }
 }
+
 .loader {
     background: #F6F6F6;
     position: fixed;
@@ -355,11 +344,11 @@ body {
 
 
 
-.coeur{
+.coeur {
     position: absolute;
     width: 22px;
     height: 21px;
     right: 0;
-    top:20px;
+    top: 20px;
 
 }

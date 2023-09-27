@@ -14,7 +14,6 @@
 }
 
 .menu {
-
     position: relative;
     @include flex_column;
     gap: 40px;
@@ -23,15 +22,16 @@
         width: 100%;
         height: 275px;
         object-fit: cover;
-
     }
-
 
     &_content {
         background: $Grey-2;
         border-radius: 40px 40px 0px 0px;
         margin-top: -100px;
 
+        @media (min-width:1025px) {
+            margin-left: 193px;
+        }
     }
 
 
@@ -69,9 +69,25 @@
         @include flex_column;
         gap: 12px;
 
+        .underline_title {
+            text-transform: uppercase;
+            @include font(16px, 300);
+            margin-left: 13px;
+
+            &::after {
+                font-size: 256px;
+                content: " ";
+                display: block;
+                height: 0px;
+                width: 40px;
+                margin-top: 6px;
+                border-bottom: solid 3px #99E2D0;
+            }
+        }
+
         .plat {
             @include flex_row;
-            height: 72px;
+            height: 69px;
             justify-content: space-between;
             background: $white;
             border-radius: 15px 15px;
@@ -120,93 +136,77 @@
                 animation-delay: 0.5s;
             }
 
-
-
-            .info {
+            &_info {
                 display: flex;
                 flex-direction: column;
             }
 
-            .plat_price {
-                align-self: flex-end;
+            &_title {
+                @include font(18px, 700);
+                padding-left: 13px;
+                margin-top: 13px;
+                text-overflow: ellipsis;
+            }
+
+            &_subtitle {
+                @include font(17px, 300);
+                padding-left: 13px;
+                text-overflow: ellipsis;
+            }
+
+            &_price {
+                position: absolute;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                font-weight: bold;
+                margin-top: 30px;
+                right: 24px;
             }
 
             .plat_confirmation {
-                background-color: #99E2D0;
-                color: #FFF;
-                font-size: 20px;
-                border-top-right-radius: 16px;
-                border-bottom-right-radius: 16px;
-                width: 56rem;
+                background: #99e2d0;
+                cursor: pointer;
+                height: auto;
+                width: 0;
+                opacity: 0;
+                border-radius: 0 15px 15px 0;
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 0;
+                transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+            }
 
-              /*  .plat_confirmation:checked {
-                    width: 100px;
-                    height: 100px;
-                    animation-name: test-animation;
-                    animation-duration: 1s;
-                
-            }*/
-        }
-        
-              .plat_confirmation:checked {
-                width: 100px;
-                height: 100px;
-                animation-name: test-animation;
-                animation-duration: 1s;
-              }
-        
-              @keyframes test-animation {
-                from {
-                  width: 0px;
-                }
-        
-                to {
-                  width: 100px;
-                }
-              }
+            i {
+                color: $white;
+            }
 
+            &:hover .plat_confirmation {
+                cursor: pointer;
+                opacity: 1;
+                width: 59px;
+            }
         }
 
+
+        
     }
 
-    .underline_title {
-        text-transform: uppercase;
-        @include font(16px, 300);
-        margin-left: 13px;
+}
 
-        &::after {
-            font-size: 256px;
-            content: " ";
-            display: block;
-            height: 0px;
-            width: 40px;
-            margin-top: 6px;
-            border-bottom: solid 3px #99E2D0;
-        }
-    }
 
-    .plat_title {
-        @include font(18px, 700);
-        padding-left: 13px;
-        margin-top: 13px;
-    }
 
-    .plat_subtitle {
-        @include font(17px, 300);
-        padding-left: 13px;
-    }
 
-    .commande {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px;
 
-    }
 
+
+
+
+
+.commande {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
 
 }
