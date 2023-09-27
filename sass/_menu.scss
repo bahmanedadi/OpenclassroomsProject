@@ -1,4 +1,5 @@
 .header_menu {
+    position: relative;
     @include flex;
     justify-content: center;
     padding: 14px 89px 13px 17px;
@@ -11,7 +12,13 @@
         padding: 0px 19px 0px 16px;
     }
 
+    a {
+        position: absolute;
+        left: 25px;
+    }
+
 }
+
 
 .menu {
     position: relative;
@@ -28,22 +35,38 @@
         background: $Grey-2;
         border-radius: 40px 40px 0px 0px;
         margin-top: -100px;
+        padding: 20px;
 
         @media (min-width:1025px) {
             margin-left: 193px;
+            margin-right: 193px;
         }
+    }
+    .coeur{
+        position: relative;
+        
+    }
+    
+    .like_btn {
+         bottom:8px;
+         @media (min-width:1025px) {
+            right:-39px;
+            
+         }
     }
 
 
     &_info {
-        position: relative;
+
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
         margin-bottom: 40px;
-        padding-left: 17px;
-        padding-right: 17px;
-        padding-top: 31px;
+        width: 100%;
+
+        @media(min-width:1025px) {
+            justify-content: center;
+        }
 
     }
 
@@ -51,28 +74,17 @@
         color: var(--Black, #101010);
         font-family: Shrikhand;
         @include font(28px, 400);
-
-
     }
-
-    .like_btn {
-        top: 42px;
-    }
-
-    &_plats {
-        @include flex_column;
-        justify-content: center;
-        gap: 20px;
-    }
+    
 
     .plat_list {
         @include flex_column;
         gap: 12px;
+        margin-bottom: 40px;
 
         .underline_title {
             text-transform: uppercase;
             @include font(16px, 300);
-            margin-left: 13px;
 
             &::after {
                 font-size: 256px;
@@ -88,12 +100,15 @@
         .plat {
             @include flex_row;
             height: 69px;
-            justify-content: space-between;
+            gap: 5px;
             background: $white;
             border-radius: 15px 15px;
             box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
             margin: 10px;
-            animation: apparition 1.5s;
+            animation: apparition 1.5s forwards;
+            margin-right: 14px;
+            opacity: 0;
+            cursor: pointer;
 
             &.n1 {
                 animation-delay: 0;
@@ -137,31 +152,37 @@
             }
 
             &_info {
-                display: flex;
-                flex-direction: column;
+                @include flex_column;
+                margin: 10px;
+                line-height: 25px;
+                width: 88%;
+                overflow: hidden;
             }
 
             &_title {
                 @include font(18px, 700);
                 padding-left: 13px;
-                margin-top: 13px;
                 text-overflow: ellipsis;
+                white-space:nowrap;
+                overflow: hidden;
             }
 
             &_subtitle {
                 @include font(17px, 300);
                 padding-left: 13px;
                 text-overflow: ellipsis;
+                white-space:nowrap;
+                overflow: hidden;
             }
 
             &_price {
-                position: absolute;
+                width: 10%;
                 display: flex;
                 justify-content: flex-end;
                 align-items: center;
                 font-weight: bold;
                 margin-top: 30px;
-                right: 24px;
+                margin-right: 20px;
             }
 
             .plat_confirmation {
@@ -189,19 +210,10 @@
         }
 
 
-        
+
     }
 
 }
-
-
-
-
-
-
-
-
-
 
 .commande {
     display: flex;

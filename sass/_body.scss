@@ -206,6 +206,7 @@ body {
                 align-items: center;
                 margin-top: 15px;
                 position: relative;
+                margin-bottom: 15px;
             }
 
             &_title {
@@ -241,7 +242,18 @@ body {
 
     }
 }
+.coeur{
+    position: relative;
+    
+}
 
+.like_btn {
+     bottom:-11px;
+     @media (min-width:1025px) {
+        right:-39px;
+        
+     }
+}
 
 .like_btne {
     background: transparent;
@@ -250,6 +262,7 @@ body {
     right: 26px;
     display: block;
     font-size: 26px;
+   
 
 }
 
@@ -273,6 +286,7 @@ body {
         cursor: pointer;
 
     }
+   
 }
 
 .loader {
