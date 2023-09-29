@@ -515,6 +515,8 @@ header .logo {
   padding: 0px 19px 0px 16px;
 }
 .header_menu a {
+  width: 30px;
+  height: 30px;
   position: absolute;
   left: 25px;
 }

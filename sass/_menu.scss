@@ -13,6 +13,8 @@
     }
 
     a {
+        width: 30px;
+        height: 30px;
         position: absolute;
         left: 25px;
     }
@@ -42,17 +44,19 @@
             margin-right: 193px;
         }
     }
-    .coeur{
+
+    .coeur {
         position: relative;
-        
+
     }
-    
+
     .like_btn {
-         bottom:8px;
-         @media (min-width:1025px) {
-            right:-39px;
-            
-         }
+        bottom: 8px;
+
+        @media (min-width:1025px) {
+            right: -39px;
+
+        }
     }
 
 
@@ -75,7 +79,7 @@
         font-family: Shrikhand;
         @include font(28px, 400);
     }
-    
+
 
     .plat_list {
         @include flex_column;
@@ -163,7 +167,7 @@
                 @include font(18px, 700);
                 padding-left: 13px;
                 text-overflow: ellipsis;
-                white-space:nowrap;
+                white-space: nowrap;
                 overflow: hidden;
             }
 
@@ -171,7 +175,7 @@
                 @include font(17px, 300);
                 padding-left: 13px;
                 text-overflow: ellipsis;
-                white-space:nowrap;
+                white-space: nowrap;
                 overflow: hidden;
             }
 
