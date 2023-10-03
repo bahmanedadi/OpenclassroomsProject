@@ -56,8 +56,7 @@ body {
     background: linear-gradient(180deg, $color-secondaire 0%, $color-primaire 100%);
     border: transparent;
     position: relative;
-    width: 218px;
-    height: 50px;
+    @include width_height(218px, 50px);
     border-radius: 25px;
     margin-bottom: 57px;
     color: $white;
@@ -104,8 +103,7 @@ body {
         gap: 27px;
         justify-content: start;
         align-items: center;
-        height: 72px;
-        width: 100%;
+        @include width_height(100%, 72px);
         margin-bottom: 25px;
         border-radius: 20px;
         background: $grey-light;
@@ -114,8 +112,7 @@ body {
 
 
         &_number {
-            width: 24px;
-            height: 24px;
+            @include width_height(24px, 24px);
             color: $white;
             background: $color-primaire;
             border-radius: 50%;
@@ -194,8 +191,7 @@ body {
 
             &_img {
                 object-fit: cover;
-                height: 231px;
-                width: 100%;
+                @include width_height(100%, 231px);
                 border-radius: 15px 15px 0px 0px;
             }
 
@@ -234,25 +230,26 @@ body {
         @include font(14px, 500);
         border-radius: 3px;
         padding: 5px 10px 7px 9px;
-        width: 80px;
-        height: 29px;
+        @include width_height(80px, 29px);
         background-color: $green;
         color: $color-green;
         box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 
     }
 }
-.coeur{
+
+.coeur {
     position: relative;
-    
+
 }
 
 .like_btn {
-     bottom:-11px;
-     @media (min-width:1025px) {
-        right:-39px;
-        
-     }
+    bottom: -11px;
+
+    @media (min-width:1025px) {
+        right: -39px;
+
+    }
 }
 
 .like_btne {
@@ -262,23 +259,21 @@ body {
     right: 26px;
     display: block;
     font-size: 26px;
-   
+
 
 }
 
 .like_btnf {
-    background-image: transparent;
+    background-color: transparent;
     opacity: 0;
     position: absolute;
     bottom: 26px;
     right: 26px;
-    font-size: 26px;
-    font-weight: 700;
-    background-image: linear-gradient(180deg, $color-secondaire , $color-primaire );
+    @include font(26px, 700);
+    background: linear-gradient(180deg, $color-secondaire , $color-primaire );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
-    -moz-background-clip: text;
     transition: opacity 0.5s ease-in-out;
 
     &:hover {
@@ -286,7 +281,7 @@ body {
         cursor: pointer;
 
     }
-   
+
 }
 
 .loader {
@@ -296,8 +291,7 @@ body {
     text-align: center;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
+    @include width_height(100%, 100%);
     z-index: 2;
     animation: disappear 1.5s 1.5s forwards;
 
@@ -307,44 +301,27 @@ body {
         letter-spacing: 1px;
         font-family: Shrikhand, cursive;
         line-height: 200px;
-        animation: text 5s ease-in-out infinite;
+        animation: text 5s ease-in-out;
     }
 
 }
 
 .ring {
     position: fixed;
-    width: 200px;
-    height: 200px;
+    @include width_height(200px, 200px);
     border-radius: 50%;
-    animation: ring 2s linear infinite;
+    animation: ring 2s linear infinite ;
     z-index: 2;
 }
 
-@keyframes ring {
-    0% {
-        transform: rotate(0deg);
-        box-shadow: 2px 6px 3px #ab21ce;
-    }
 
-    50% {
-        transform: rotate(180deg);
-        box-shadow: 2px 6px 3px #18b201;
-    }
-
-    100% {
-        transform: rotate(360deg);
-        box-shadow: 2px 6px 3px #8909a3;
-    }
-}
 
 .ring:before {
-    position: fixed;
+    position: f;
     content: '';
     left: 0;
     top: 0;
-    height: 100%;
-    width: 100%;
+    @include width_height(100%, 100%);
     border-radius: 50%;
     box-shadow: 0 0 5px rgba(255, 255, 255, .3);
 
@@ -360,8 +337,7 @@ body {
 
 .coeur {
     position: absolute;
-    width: 22px;
-    height: 21px;
+    @include width_height(22px, 21px);
     right: 0;
     top: 20px;
 

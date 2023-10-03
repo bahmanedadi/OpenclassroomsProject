@@ -1,3 +1,19 @@
+@keyframes ring {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 2px 6px 3px #ab21ce;
+    }
+
+    50% {
+        transform: rotate(180deg);
+        box-shadow: 2px 6px 3px #18b201;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 2px 6px 3px #8909a3;
+    }
+}
 @keyframes disappear {
     to {
         transform: scale(0);
@@ -15,7 +31,7 @@
         transform: scale(1);
     }
 }
-@keyframes test-animation {
+/*@keyframes test-animation {
     from {
       width: 0px;
     }
@@ -23,4 +39,4 @@
     to {
       width: 100px;
     }
-  }
+  }*/

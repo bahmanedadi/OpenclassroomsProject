@@ -7,14 +7,12 @@
     gap: 88px;
 
     .logo_menu {
-        width: 197px;
-        height: 36px;
+        @include width_height(197px,36px);
         padding: 0px 19px 0px 16px;
     }
 
     a {
-        width: 30px;
-        height: 30px;
+        @include width_height(30px,30px);
         position: absolute;
         left: 25px;
     }
@@ -28,20 +26,24 @@
     gap: 40px;
 
     &_img {
-        width: 100%;
-        height: 275px;
+        @include width_height(100%,275px);
         object-fit: cover;
+        @media (min-width:1025px) {
+            @include width_height(100%,400px); 
+        }
     }
 
     &_content {
-        background: $Grey-2;
+        background: $grey-light;
         border-radius: 40px 40px 0px 0px;
         margin-top: -100px;
         padding: 20px;
 
         @media (min-width:1025px) {
-            margin-left: 193px;
-            margin-right: 193px;
+            @include margin(10%,10%);
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 50px;
         }
     }
 
@@ -94,8 +96,7 @@
                 font-size: 256px;
                 content: " ";
                 display: block;
-                height: 0px;
-                width: 40px;
+                @include width_height(40px,0px);
                 margin-top: 6px;
                 border-bottom: solid 3px #99E2D0;
             }
@@ -213,12 +214,9 @@
             }
         }
 
-
-
     }
 
 }
-
 .commande {
     display: flex;
     justify-content: center;

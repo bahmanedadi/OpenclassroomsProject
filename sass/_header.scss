@@ -5,11 +5,7 @@ header {
     background: $white;
 
     .logo {
-        width: 197;
-        height: 36px;
+        @include width_height(197px, 36px);
     }
 
 }
-
-
-
