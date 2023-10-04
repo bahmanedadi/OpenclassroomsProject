@@ -14,11 +14,15 @@
         box-shadow: 2px 6px 3px #8909a3;
     }
 }
+@keyframes text {
+    50% {
+        color: $color-primaire;
+    }
+}
 @keyframes disappear {
     to {
         transform: scale(0);
     }
-
 }
 @keyframes apparition {
     0% {
@@ -31,12 +35,3 @@
         transform: scale(1);
     }
 }
-/*@keyframes test-animation {
-    from {
-      width: 0px;
-    }
-
-    to {
-      width: 100px;
-    }
-  }*/

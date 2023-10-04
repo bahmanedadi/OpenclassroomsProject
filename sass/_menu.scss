@@ -7,18 +7,16 @@
     gap: 88px;
 
     .logo_menu {
-        @include width_height(197px,36px);
+        @include width_height(197px, 36px);
         padding: 0px 19px 0px 16px;
     }
 
     a {
-        @include width_height(30px,30px);
+        @include width_height(30px, 30px);
         position: absolute;
         left: 25px;
     }
-
 }
-
 
 .menu {
     position: relative;
@@ -26,10 +24,11 @@
     gap: 40px;
 
     &_img {
-        @include width_height(100%,275px);
+        @include width_height(100%, 275px);
         object-fit: cover;
+
         @media (min-width:1025px) {
-            @include width_height(100%,400px); 
+            @include width_height(100%, 400px);
         }
     }
 
@@ -40,7 +39,7 @@
         padding: 20px;
 
         @media (min-width:1025px) {
-            @include margin(10%,10%);
+            @include margin(10%, 10%);
             padding-left: 10%;
             padding-right: 10%;
             padding-top: 50px;
@@ -57,13 +56,10 @@
 
         @media (min-width:1025px) {
             right: -39px;
-
         }
     }
 
-
     &_info {
-
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -73,7 +69,6 @@
         @media(min-width:1025px) {
             justify-content: center;
         }
-
     }
 
     &_title {
@@ -81,7 +76,6 @@
         font-family: Shrikhand;
         @include font(28px, 400);
     }
-
 
     .plat_list {
         @include flex_column;
@@ -96,7 +90,7 @@
                 font-size: 256px;
                 content: " ";
                 display: block;
-                @include width_height(40px,0px);
+                @include width_height(40px, 0px);
                 margin-top: 6px;
                 border-bottom: solid 3px #99E2D0;
             }
@@ -110,13 +104,13 @@
             border-radius: 15px 15px;
             box-shadow: 0px 4.01149px 15.0431px 0px rgba(0, 0, 0, 0.10);
             margin: 10px;
-            animation: apparition 1.5s forwards;
             margin-right: 14px;
             opacity: 0;
             cursor: pointer;
+            animation: apparition 1.5s forwards;
 
             &.n1 {
-                animation-delay: 0;
+                animation-delay: 0s;
             }
 
             &.n2 {
@@ -213,9 +207,7 @@
                 width: 59px;
             }
         }
-
     }
-
 }
 .commande {
     display: flex;
