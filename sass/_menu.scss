@@ -48,12 +48,10 @@
 
     .coeur {
         position: relative;
-
     }
 
     .like_btn {
         bottom: 8px;
-
         @media (min-width:1025px) {
             right: -39px;
         }
@@ -194,7 +192,7 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                transition: transform 0.4s ease-in-out, width 0.4s ease-in-out, opacity 0.4s ease-in-out;
+                transition: transform 0.4s ease-in-out, width, opacity;
             }
 
             i {
